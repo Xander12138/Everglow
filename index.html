@@ -57,53 +57,150 @@
       color: var(--ink-soft); font-size: 14px;
     }
     .email { font-weight: 600; }
+    .lang-switch {
+      position: fixed; top: 18px; right: 18px;
+      display: inline-flex; background: var(--surface);
+      border: 1px solid var(--rule); border-radius: 999px; overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px; z-index: 10;
+    }
+    .lang-switch button {
+      appearance: none; border: none; background: transparent;
+      color: var(--ink-soft); padding: 7px 14px; cursor: pointer;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+    }
+    .lang-switch button.active { background: var(--accent); color: #fff; }
+    [lang-hidden] { display: none !important; }
   </style>
 </head>
 <body>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="zh">中文</button>
+  </div>
+
   <div class="wrap">
     <header>
       <div class="mark">Everglow</div>
-      <h1>Support</h1>
-      <p class="tagline">A private, local-first journal with an on-device companion.</p>
+      <h1>
+        <span data-lang="en">Support</span>
+        <span data-lang="zh">支持</span>
+      </h1>
+      <p class="tagline">
+        <span data-lang="en">A private, local-first journal with an on-device companion.</span>
+        <span data-lang="zh">一款隐私优先、数据本地存储、内置离线 AI 伙伴的日记应用。</span>
+      </p>
     </header>
 
-    <h2>Get in touch</h2>
+    <h2>
+      <span data-lang="en">Get in touch</span>
+      <span data-lang="zh">联系我们</span>
+    </h2>
     <div class="card">
-      <p>Questions, bug reports, or feedback? We read every message.</p>
-      <p>Email <a class="email" href="mailto:eightman532@gmail.com">eightman532@gmail.com</a> and we'll get back to you, usually within a couple of days.</p>
+      <p>
+        <span data-lang="en">Questions, bug reports, or feedback? We read every message.</span>
+        <span data-lang="zh">有疑问、Bug 反馈或建议？我们会阅读每一条留言。</span>
+      </p>
+      <p>
+        <span data-lang="en">Email <a class="email" href="mailto:eightman532@gmail.com">eightman532@gmail.com</a> and we'll get back to you, usually within a couple of days.</span>
+        <span data-lang="zh">发送邮件至 <a class="email" href="mailto:eightman532@gmail.com">eightman532@gmail.com</a>，我们通常会在几天内回复。</span>
+      </p>
     </div>
 
-    <h2>Frequently asked</h2>
+    <h2>
+      <span data-lang="en">Frequently asked</span>
+      <span data-lang="zh">常见问题</span>
+    </h2>
 
     <div class="faq">
-      <h3>Where is my journal stored?</h3>
-      <p>On your device. Entries, chats, and everything Everglow learns about your world stay in local storage by default.</p>
+      <h3>
+        <span data-lang="en">Where is my journal stored?</span>
+        <span data-lang="zh">我的日记存储在哪里？</span>
+      </h3>
+      <p>
+        <span data-lang="en">On your device. Entries, chats, and everything Everglow learns about your world stay in local storage by default.</span>
+        <span data-lang="zh">在你的设备上。日记、对话，以及 Everglow 了解到的关于你世界的一切，默认都保存在本地。</span>
+      </p>
     </div>
 
     <div class="faq">
-      <h3>Does my writing get sent to the cloud?</h3>
-      <p>Not unless you choose it. The built-in AI runs entirely on-device. You can optionally connect a third-party AI provider with your own API key, or turn on encrypted iCloud backup — both are off by default and clearly opt-in.</p>
+      <h3>
+        <span data-lang="en">Does my writing get sent to the cloud?</span>
+        <span data-lang="zh">我写的内容会被上传到云端吗？</span>
+      </h3>
+      <p>
+        <span data-lang="en">Not unless you choose it. The built-in AI runs entirely on-device. You can optionally connect a third-party AI provider with your own API key, or turn on encrypted iCloud backup — both are off by default and clearly opt-in.</span>
+        <span data-lang="zh">除非你主动选择，否则不会。内置 AI 完全在设备本地运行。你可以选择用自己的 API 密钥连接第三方 AI 服务，或开启加密的 iCloud 备份——两者默认都是关闭的，需要你明确开启。</span>
+      </p>
     </div>
 
     <div class="faq">
-      <h3>How do I back up or move to a new device?</h3>
-      <p>Enable iCloud backup in Settings. Everglow bundles your data into a single encrypted snapshot in your private iCloud, which you can restore during setup on a new device.</p>
+      <h3>
+        <span data-lang="en">How do I back up or move to a new device?</span>
+        <span data-lang="zh">如何备份或迁移到新设备？</span>
+      </h3>
+      <p>
+        <span data-lang="en">Enable iCloud backup in Settings. Everglow bundles your data into a single encrypted snapshot in your private iCloud, which you can restore during setup on a new device.</span>
+        <span data-lang="zh">在「设置」中开启 iCloud 备份。Everglow 会将你的数据打包成一份加密快照，存入你的私人 iCloud，你可以在新设备的初始设置时恢复它。</span>
+      </p>
     </div>
 
     <div class="faq">
-      <h3>How do I lock the app?</h3>
-      <p>Settings → App Lock lets you set a PIN or password and enable Face ID / Touch ID.</p>
+      <h3>
+        <span data-lang="en">How do I lock the app?</span>
+        <span data-lang="zh">如何为应用加锁？</span>
+      </h3>
+      <p>
+        <span data-lang="en">Settings → App Lock lets you set a PIN or password and enable Face ID / Touch ID.</span>
+        <span data-lang="zh">「设置」→「应用锁」可设置 PIN 码或密码，并开启 Face ID / Touch ID。</span>
+      </p>
     </div>
 
     <div class="faq">
-      <h3>How do I delete my data?</h3>
-      <p>Deleting the app removes all on-device data. If you enabled iCloud backup, you can remove the snapshot from your iCloud storage settings.</p>
+      <h3>
+        <span data-lang="en">How do I delete my data?</span>
+        <span data-lang="zh">如何删除我的数据？</span>
+      </h3>
+      <p>
+        <span data-lang="en">Deleting the app removes all on-device data. If you enabled iCloud backup, you can remove the snapshot from your iCloud storage settings.</span>
+        <span data-lang="zh">删除应用即可清除所有本地数据。如果你开启过 iCloud 备份，可在 iCloud 存储设置中删除该快照。</span>
+      </p>
     </div>
 
     <footer>
-      <p><a href="./privacy.html">Privacy Policy</a></p>
-      <p>© 2026 Everglow. All rights reserved.</p>
+      <p>
+        <a href="./privacy.html"><span data-lang="en">Privacy Policy</span><span data-lang="zh">隐私政策</span></a>
+      </p>
+      <p>
+        <span data-lang="en">© 2026 Everglow. All rights reserved.</span>
+        <span data-lang="zh">© 2026 Everglow 版权所有。</span>
+      </p>
     </footer>
   </div>
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem("everglow-lang");
+      var lang = saved || (navigator.language && navigator.language.toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+      function apply(l) {
+        lang = l;
+        document.documentElement.lang = (l === "zh") ? "zh-Hans" : "en";
+        document.querySelectorAll("[data-lang]").forEach(function (el) {
+          if (el.tagName === "BUTTON") {
+            el.classList.toggle("active", el.getAttribute("data-lang") === l);
+          } else if (el.getAttribute("data-lang") === l) {
+            el.removeAttribute("lang-hidden");
+          } else {
+            el.setAttribute("lang-hidden", "");
+          }
+        });
+        localStorage.setItem("everglow-lang", l);
+      }
+      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+        btn.addEventListener("click", function () { apply(btn.getAttribute("data-lang")); });
+      });
+      apply(lang);
+    })();
+  </script>
 </body>
 </html>
