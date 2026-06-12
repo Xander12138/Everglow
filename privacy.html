@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everglow — Privacy Policy</title>
+  <style>
+    :root {
+      --ink: #2b2622;
+      --ink-soft: #6b635b;
+      --paper: #faf6f0;
+      --surface: #fffdf9;
+      --accent: #b5703c;
+      --rule: #e7ddd0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #ece5db;
+        --ink-soft: #a89f93;
+        --paper: #1a1714;
+        --surface: #221e1a;
+        --accent: #d68a52;
+        --rule: #38322b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+    .mark {
+      font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600;
+    }
+    h1 { font-size: 36px; margin: 8px 0 6px; font-weight: 600; letter-spacing: -0.02em; }
+    .updated { color: var(--ink-soft); font-size: 15px; margin: 0 0 8px; }
+    h2 { font-size: 21px; margin: 44px 0 10px; font-weight: 600; }
+    p, li { color: var(--ink); }
+    li { margin-bottom: 8px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lead {
+      font-size: 18px; color: var(--ink-soft);
+      border-left: 3px solid var(--accent); padding-left: 18px; margin: 28px 0;
+    }
+    strong { font-weight: 600; }
+    footer {
+      margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+      color: var(--ink-soft); font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="mark">Everglow</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 12, 2026</p>
+
+    <p class="lead">Everglow is built to be a private place to think. Your journal lives on your device, and nothing leaves it unless you explicitly turn on a feature that requires it.</p>
+
+    <h2>The short version</h2>
+    <ul>
+      <li>We don't run servers, and we don't collect, see, or store your data.</li>
+      <li>There is no analytics, no tracking, no advertising, and no third-party SDKs harvesting your activity.</li>
+      <li>Your journal entries, chats, and the people and places Everglow recognizes are stored locally on your device.</li>
+      <li>The built-in AI companion runs entirely on-device — your writing is processed locally.</li>
+      <li>Two optional features can send data off-device, and both are off by default: third-party AI providers and iCloud backup.</li>
+    </ul>
+
+    <h2>What we collect</h2>
+    <p><strong>Nothing.</strong> Everglow has no backend operated by us. We do not have accounts, and we never receive your journal content, usage data, device identifiers, or personal information.</p>
+
+    <h2>What stays on your device</h2>
+    <p>All of your content is stored locally in the app's private storage, including:</p>
+    <ul>
+      <li>Journal entries, photos, and any audio you add.</li>
+      <li>Chat conversations with the companion.</li>
+      <li>The entities (people, places, things) and connections Everglow derives from your writing.</li>
+      <li>Your settings and preferences.</li>
+    </ul>
+    <p>Any API keys you enter are stored securely in the device Keychain. If you set an app-lock password, only a one-way hash of it is stored — never the password itself.</p>
+
+    <h2>On-device AI</h2>
+    <p>By default, Everglow's AI features are powered by a language model that runs <strong>entirely on your device</strong>. Your entries and chats are processed locally and are not transmitted anywhere for this to work.</p>
+
+    <h2>Optional: third-party AI providers</h2>
+    <p>If you prefer, you can connect Everglow to a third-party AI provider — such as Anthropic (Claude), OpenAI, Google (Gemini), or DeepSeek — by entering your own API key. This is entirely optional and off by default.</p>
+    <p>When you enable a remote provider, the journal or chat content needed to fulfill your request is sent directly from your device to that provider for processing. That data is then handled under <strong>that provider's privacy policy and terms</strong>, not ours. We are not an intermediary and do not see this traffic. You can switch back to the on-device model at any time.</p>
+
+    <h2>Optional: iCloud backup</h2>
+    <p>You may turn on iCloud backup to protect your journal and move it between your own devices. When enabled, Everglow bundles your data into a single encrypted snapshot stored in <strong>your private iCloud (CloudKit) account</strong>. This data lives in your own Apple iCloud storage under Apple's privacy terms; we have no access to it. Disabling backup and deleting the snapshot removes it from iCloud.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Everglow is not directed to children under 13, and we do not knowingly collect information from them. Because no data is collected by us, the app does not gather personal information from any user.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we change how the app handles data, we'll update this page and revise the date above. Material changes will be reflected in the app where appropriate.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email <a href="mailto:eightman532@gmail.com">eightman532@gmail.com</a>.</p>
+
+    <footer>
+      <p><a href="./index.html">Support</a></p>
+      <p>© 2026 Everglow. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

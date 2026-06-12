@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everglow — Support</title>
+  <style>
+    :root {
+      --ink: #2b2622;
+      --ink-soft: #6b635b;
+      --paper: #faf6f0;
+      --surface: #fffdf9;
+      --accent: #b5703c;
+      --rule: #e7ddd0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #ece5db;
+        --ink-soft: #a89f93;
+        --paper: #1a1714;
+        --surface: #221e1a;
+        --accent: #d68a52;
+        --rule: #38322b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 64px 24px 96px; }
+    header { margin-bottom: 48px; }
+    .mark {
+      font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600;
+    }
+    h1 { font-size: 40px; margin: 8px 0 12px; font-weight: 600; letter-spacing: -0.02em; }
+    .tagline { color: var(--ink-soft); font-size: 18px; margin: 0; }
+    h2 { font-size: 22px; margin: 48px 0 12px; font-weight: 600; }
+    p { color: var(--ink); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--surface); border: 1px solid var(--rule);
+      border-radius: 16px; padding: 24px 28px; margin-top: 16px;
+    }
+    .faq { border-top: 1px solid var(--rule); padding: 20px 0; }
+    .faq:first-of-type { border-top: none; }
+    .faq h3 { margin: 0 0 6px; font-size: 17px; font-weight: 600; }
+    .faq p { margin: 0; color: var(--ink-soft); }
+    footer {
+      margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+      color: var(--ink-soft); font-size: 14px;
+    }
+    .email { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="mark">Everglow</div>
+      <h1>Support</h1>
+      <p class="tagline">A private, local-first journal with an on-device companion.</p>
+    </header>
+
+    <h2>Get in touch</h2>
+    <div class="card">
+      <p>Questions, bug reports, or feedback? We read every message.</p>
+      <p>Email <a class="email" href="mailto:eightman532@gmail.com">eightman532@gmail.com</a> and we'll get back to you, usually within a couple of days.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+
+    <div class="faq">
+      <h3>Where is my journal stored?</h3>
+      <p>On your device. Entries, chats, and everything Everglow learns about your world stay in local storage by default.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Does my writing get sent to the cloud?</h3>
+      <p>Not unless you choose it. The built-in AI runs entirely on-device. You can optionally connect a third-party AI provider with your own API key, or turn on encrypted iCloud backup — both are off by default and clearly opt-in.</p>
+    </div>
+
+    <div class="faq">
+      <h3>How do I back up or move to a new device?</h3>
+      <p>Enable iCloud backup in Settings. Everglow bundles your data into a single encrypted snapshot in your private iCloud, which you can restore during setup on a new device.</p>
+    </div>
+
+    <div class="faq">
+      <h3>How do I lock the app?</h3>
+      <p>Settings → App Lock lets you set a PIN or password and enable Face ID / Touch ID.</p>
+    </div>
+
+    <div class="faq">
+      <h3>How do I delete my data?</h3>
+      <p>Deleting the app removes all on-device data. If you enabled iCloud backup, you can remove the snapshot from your iCloud storage settings.</p>
+    </div>
+
+    <footer>
+      <p><a href="./privacy.html">Privacy Policy</a></p>
+      <p>© 2026 Everglow. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
