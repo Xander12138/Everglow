@@ -1,0 +1,43 @@
+# Everglow: AI Journal
+
+> Everglow is an AI journal for iPhone by Haoyu Xu. You write entries in your own words; Everglow lets you ask questions across your journal, talk entries through with an AI companion, and revisit the people and places you write about. Your journal archive is stored locally on your iPhone, and you choose where AI runs: on-device, with your own API key, or through the optional Everglow Cloud subscription. Not related to the K-pop group EVERGLOW.
+
+Key facts:
+
+- Platform: iPhone (App Store: https://apps.apple.com/us/app/everglow-ai-journal/id6775044981).
+- Languages: English, Simplified Chinese, Japanese, French and Spanish.
+- Free to start: up to 7 journal entries and 10 companion chat turns.
+- Everglow Unlimited: a one-time purchase that permanently removes the entry and companion-chat limits. It does not include hosted AI.
+- Everglow Cloud: an optional subscription for hosted AI with a monthly usage allowance; request context goes through Everglow's service to OpenAI, and Everglow retains no content after the request completes. Entry and chat limits are lifted while it is active.
+- On-device AI: runs on the iPhone after a one-time model download (about 2.6 GB), so writing and AI features work offline. Availability and performance depend on the device.
+- Your own API key: OpenAI, Claude, Gemini or DeepSeek; that provider's policies and charges apply.
+- Everglow never uses your writing to train any model. You can also write without AI.
+- Import: entry review before import for Markdown, plain text, folders, ZIP, CSV and JSON. A complete transfer of media, tags, titles or PDFs from another journal app is not assured.
+- Export: dated entries and conversations as plain, unencrypted Markdown in a ZIP. Optional iCloud backup stores an encrypted snapshot in the user's private CloudKit database.
+- Prices and offers are shown in the app and vary by storefront.
+- AI can make mistakes; answers can be checked against the original entries.
+
+## Questions
+
+- [What is an AI journal?](https://everglow.cc/what-is-an-ai-journal/): what Everglow does with your entries, and what it doesn't
+- [Can an AI journal work offline?](https://everglow.cc/offline-ai-journal/): on-device AI and what needs a connection
+- [Is an AI journal private?](https://everglow.cc/private-ai-journal/): where your writing goes with each AI engine
+
+## Details
+
+- [AI and privacy](https://everglow.cc/ai-and-privacy/): the data flow for on-device AI, your own API key and Everglow Cloud
+- [Plans](https://everglow.cc/plans/): free limits, Everglow Unlimited and Everglow Cloud
+- [Import and export](https://everglow.cc/portability/): import review, Markdown export and backup
+- [Privacy policy](https://everglow.cc/privacy/)
+- [Terms of use](https://everglow.cc/terms/)
+
+## Other languages
+
+- [简体中文](https://everglow.cc/zh/)
+- [日本語](https://everglow.cc/ja/)
+- [Français](https://everglow.cc/fr/)
+- [Español](https://everglow.cc/es/)
+
+## Contact
+
+- Support: eightman532+everglowsupport@gmail.com
