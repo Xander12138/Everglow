@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everglow — Privacy Policy</title>
+  <style>
+    :root {
+      --ink: #2b2622;
+      --ink-soft: #6b635b;
+      --paper: #faf6f0;
+      --surface: #fffdf9;
+      --accent: #b5703c;
+      --rule: #e7ddd0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #ece5db;
+        --ink-soft: #a89f93;
+        --paper: #1a1714;
+        --surface: #221e1a;
+        --accent: #d68a52;
+        --rule: #38322b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+    .mark {
+      font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600;
+    }
+    h1 { font-size: 36px; margin: 8px 0 6px; font-weight: 600; letter-spacing: -0.02em; }
+    .updated { color: var(--ink-soft); font-size: 15px; margin: 0 0 8px; }
+    h2 { font-size: 21px; margin: 44px 0 10px; font-weight: 600; }
+    p, li { color: var(--ink); }
+    li { margin-bottom: 8px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lead {
+      font-size: 18px; color: var(--ink-soft);
+      border-left: 3px solid var(--accent); padding-left: 18px; margin: 28px 0;
+    }
+    strong { font-weight: 600; }
+    footer {
+      margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+      color: var(--ink-soft); font-size: 14px;
+    }
+    .lang-switch {
+      position: fixed; top: 18px; right: 18px;
+      display: inline-flex; background: var(--surface);
+      border: 1px solid var(--rule); border-radius: 999px; overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px; z-index: 10;
+    }
+    .lang-switch button {
+      appearance: none; border: none; background: transparent;
+      color: var(--ink-soft); padding: 7px 14px; cursor: pointer;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+    }
+    .lang-switch button.active { background: var(--accent); color: #fff; }
+    [lang-hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="zh">中文</button>
+  </div>
+
+  <div class="wrap">
+    <div class="mark">Everglow</div>
+    <h1>
+      <span data-lang="en">Privacy Policy</span>
+      <span data-lang="zh">隐私政策</span>
+    </h1>
+    <p class="updated">
+      <span data-lang="en">Last updated: July 18, 2026</span>
+      <span data-lang="zh">最后更新：2026 年 7 月 18 日</span>
+    </p>
+
+    <p class="lead">
+      <span data-lang="en">Everglow is built to be a private place to think. Your journal lives on your device, and nothing leaves it unless you explicitly turn on a feature that requires it.</span>
+      <span data-lang="zh">Everglow 旨在成为一个属于你的私密思考空间。你的日记存储在你的设备上，除非你主动开启某项需要联网的功能，否则任何内容都不会离开设备。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">The short version</span>
+      <span data-lang="zh">简要说明</span>
+    </h2>
+    <ul>
+      <li>
+        <span data-lang="en">By default we don't run servers, and we don't collect, see, or store your data. The one exception is Everglow Cloud, an optional hosted-AI subscription you can turn on (details below).</span>
+        <span data-lang="zh">默认情况下，我们不运营任何服务器，也不会收集、查看或存储你的数据。唯一的例外是 Everglow 云端——一项你可选择开启的托管 AI 订阅（详见下文）。</span>
+      </li>
+      <li>
+        <span data-lang="en">There is no analytics, no tracking, no advertising, and no third-party SDKs harvesting your activity.</span>
+        <span data-lang="zh">没有任何分析统计、行为追踪、广告，也没有第三方 SDK 采集你的使用行为。</span>
+      </li>
+      <li>
+        <span data-lang="en">Your journal entries, chats, and the people and places Everglow recognizes are stored locally on your device.</span>
+        <span data-lang="zh">你的日记、对话，以及 Everglow 识别出的人物和地点，都保存在你的设备本地。</span>
+      </li>
+      <li>
+        <span data-lang="en">The built-in AI companion runs entirely on-device — your writing is processed locally.</span>
+        <span data-lang="zh">内置的 AI 伙伴完全在设备本地运行——你写下的内容也在本地处理。</span>
+      </li>
+      <li>
+        <span data-lang="en">Three optional features can send data off-device, and all are off by default: Everglow Cloud, third-party AI providers, and iCloud backup.</span>
+        <span data-lang="zh">有三项可选功能会将数据发送到设备之外，且默认均为关闭：Everglow 云端、第三方 AI 服务和 iCloud 备份。</span>
+      </li>
+    </ul>
+
+    <h2>
+      <span data-lang="en">What we collect</span>
+      <span data-lang="zh">我们收集哪些信息</span>
+    </h2>
+    <p>
+      <span data-lang="en"><strong>Nothing, by default.</strong> For the core app, Everglow has no backend operated by us; we do not have accounts, and we never receive your journal content, usage data, device identifiers, or personal information. The one exception is the optional Everglow Cloud subscription (below): when you use it, the content of a request passes through Everglow's hosted service to generate your reply and is not retained after the request completes.</span>
+      <span data-lang="zh"><strong>默认不收集任何信息。</strong>就核心应用而言，Everglow 没有由我们运营的后端服务；我们没有账户体系，也绝不会获取你的日记内容、使用数据、设备标识或个人信息。唯一的例外是可选的 Everglow 云端订阅（见下文）：当你使用它时，请求所含的内容会经由 Everglow 的托管服务处理以生成回复，并在请求完成后不予保留。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">What stays on your device</span>
+      <span data-lang="zh">哪些内容保存在你的设备上</span>
+    </h2>
+    <p>
+      <span data-lang="en">All of your content is stored locally in the app's private storage, including:</span>
+      <span data-lang="zh">你的全部内容都保存在应用的私有本地存储中，包括：</span>
+    </p>
+    <ul>
+      <li>
+        <span data-lang="en">Journal entries, photos, and any audio you add.</span>
+        <span data-lang="zh">日记、照片，以及你添加的任何音频。</span>
+      </li>
+      <li>
+        <span data-lang="en">Chat conversations with the companion.</span>
+        <span data-lang="zh">与 AI 伙伴的对话。</span>
+      </li>
+      <li>
+        <span data-lang="en">The entities (people, places, things) and connections Everglow derives from your writing.</span>
+        <span data-lang="zh">Everglow 从你的文字中提炼出的实体（人物、地点、事物）及其关联。</span>
+      </li>
+      <li>
+        <span data-lang="en">Your settings and preferences.</span>
+        <span data-lang="zh">你的设置与偏好。</span>
+      </li>
+    </ul>
+    <p>
+      <span data-lang="en">Any API keys you enter are stored securely in the device Keychain. If you set an app-lock password, only a one-way hash of it is stored — never the password itself.</span>
+      <span data-lang="zh">你输入的任何 API 密钥都会安全地保存在设备的钥匙串（Keychain）中。如果你设置了应用锁密码，仅会保存其单向哈希值，绝不会保存密码本身。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">On-device AI</span>
+      <span data-lang="zh">设备端 AI</span>
+    </h2>
+    <p>
+      <span data-lang="en">By default, Everglow's AI features are powered by a language model that runs <strong>entirely on your device</strong>. Your entries and chats are processed locally and are not transmitted anywhere for this to work.</span>
+      <span data-lang="zh">默认情况下，Everglow 的 AI 功能由一个<strong>完全在你设备上运行</strong>的语言模型驱动。你的日记和对话均在本地处理，无需将其传输到任何地方即可工作。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">Optional: third-party AI providers</span>
+      <span data-lang="zh">可选项：第三方 AI 服务</span>
+    </h2>
+    <p>
+      <span data-lang="en">If you prefer, you can connect Everglow to a third-party AI provider — such as Anthropic (Claude), OpenAI, Google (Gemini), or DeepSeek — by entering your own API key. This is entirely optional and off by default.</span>
+      <span data-lang="zh">如果你愿意，可以通过输入自己的 API 密钥，将 Everglow 连接到第三方 AI 服务——例如 Anthropic（Claude）、OpenAI、Google（Gemini）或 DeepSeek。此功能完全可选，且默认关闭。</span>
+    </p>
+    <p>
+      <span data-lang="en">When you enable a remote provider, the journal or chat content needed to fulfill your request is sent directly from your device to that provider for processing. That data is then handled under <strong>that provider's privacy policy and terms</strong>, not ours. We are not an intermediary and do not see this traffic. You can switch back to the on-device model at any time.</span>
+      <span data-lang="zh">当你启用某个远程服务时，为完成你的请求所需的日记或对话内容，会直接从你的设备发送给该服务商进行处理。这些数据随后将依据<strong>该服务商的隐私政策和条款</strong>处理，而非我们的。我们不是中间方，也无法看到这些流量。你可以随时切换回设备端模型。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">Optional: Everglow Cloud (hosted AI)</span>
+      <span data-lang="zh">可选项：Everglow 云端（托管 AI）</span>
+    </h2>
+    <p>
+      <span data-lang="en">You can optionally subscribe to <strong>Everglow Cloud</strong>, a hosted AI option operated by Everglow. Unlike the on-device model and unlike bringing your own key, this routes through Everglow's own servers. When it is your chosen engine, the journal or chat content needed for your request is sent — encrypted in transit — to Everglow's servers, which process it using <strong>OpenAI as our sub-processor</strong> to generate your reply. Everglow <strong>retains no content after the request completes and never uses your writing to train any model</strong>. Once your content reaches OpenAI, it is also handled under <a href="https://openai.com/policies/privacy-policy/">OpenAI's own privacy policy</a>. Everglow Cloud is optional, off by default, and you can switch back to the on-device model at any time.</span>
+      <span data-lang="zh">你可以选择订阅 <strong>Everglow 云端</strong>——一项由 Everglow 运营的托管 AI 服务。与设备端模型不同，也与自带密钥不同，它会经由 Everglow 自己的服务器处理。当它作为你选用的引擎时，为完成你的请求所需的日记或对话内容，会经加密传输发送至 Everglow 的服务器，并由其<strong>使用 OpenAI 作为我们的子处理方</strong>进行处理以生成回复。Everglow <strong>在请求完成后不保留任何内容，也绝不会用你的文字训练任何模型</strong>。当你的内容抵达 OpenAI 后，还将依据 <a href="https://openai.com/policies/privacy-policy/">OpenAI 自身的隐私政策</a>处理。Everglow 云端完全可选，默认关闭，你可以随时切换回设备端模型。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">Optional: iCloud backup</span>
+      <span data-lang="zh">可选项：iCloud 备份</span>
+    </h2>
+    <p>
+      <span data-lang="en">You may turn on iCloud backup to protect your journal and move it between your own devices. When enabled, Everglow bundles your data into a single encrypted snapshot stored in <strong>your private iCloud (CloudKit) account</strong>. This data lives in your own Apple iCloud storage under Apple's privacy terms; we have no access to it. Disabling backup and deleting the snapshot removes it from iCloud.</span>
+      <span data-lang="zh">你可以开启 iCloud 备份，以保护日记并在自己的设备之间迁移。开启后，Everglow 会将你的数据打包成一份加密快照，存入<strong>你的私人 iCloud（CloudKit）账户</strong>。这些数据存放在你自己的 Apple iCloud 存储中，受 Apple 隐私条款约束；我们无权访问。关闭备份并删除该快照即可将其从 iCloud 中移除。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">Children's privacy</span>
+      <span data-lang="zh">儿童隐私</span>
+    </h2>
+    <p>
+      <span data-lang="en">Everglow is not directed to children under 13, and we do not knowingly collect information from them. Because no data is collected by us, the app does not gather personal information from any user.</span>
+      <span data-lang="zh">Everglow 并非面向 13 岁以下儿童，我们也不会有意收集他们的信息。由于我们不收集任何数据，本应用不会从任何用户处采集个人信息。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">Changes to this policy</span>
+      <span data-lang="zh">本政策的变更</span>
+    </h2>
+    <p>
+      <span data-lang="en">If we change how the app handles data, we'll update this page and revise the date above. Material changes will be reflected in the app where appropriate.</span>
+      <span data-lang="zh">如果我们更改了应用处理数据的方式，会更新本页面并修订上方的日期。重大变更将在应用内适当位置予以体现。</span>
+    </p>
+
+    <h2>
+      <span data-lang="en">Contact</span>
+      <span data-lang="zh">联系方式</span>
+    </h2>
+    <p>
+      <span data-lang="en">Questions about privacy? Email <a href="mailto:eightman532@gmail.com">eightman532@gmail.com</a>.</span>
+      <span data-lang="zh">对隐私有疑问？请发送邮件至 <a href="mailto:eightman532@gmail.com">eightman532@gmail.com</a>。</span>
+    </p>
+
+    <footer>
+      <p>
+        <a href="./index.html"><span data-lang="en">Support</span><span data-lang="zh">支持</span></a>
+        &nbsp;·&nbsp;
+        <a href="./terms.html"><span data-lang="en">Terms of Use</span><span data-lang="zh">使用条款</span></a>
+      </p>
+      <p>
+        <span data-lang="en">© 2026 Haoyu Xu. All rights reserved.</span>
+        <span data-lang="zh">© 2026 Haoyu Xu 版权所有。</span>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem("everglow-lang");
+      var lang = saved || (navigator.language && navigator.language.toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+      function apply(l) {
+        lang = l;
+        document.documentElement.lang = (l === "zh") ? "zh-Hans" : "en";
+        document.querySelectorAll("[data-lang]").forEach(function (el) {
+          if (el.tagName === "BUTTON") {
+            el.classList.toggle("active", el.getAttribute("data-lang") === l);
+          } else if (el.getAttribute("data-lang") === l) {
+            el.removeAttribute("lang-hidden");
+          } else {
+            el.setAttribute("lang-hidden", "");
+          }
+        });
+        localStorage.setItem("everglow-lang", l);
+      }
+      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+        btn.addEventListener("click", function () { apply(btn.getAttribute("data-lang")); });
+      });
+      apply(lang);
+    })();
+  </script>
+</body>
+</html>

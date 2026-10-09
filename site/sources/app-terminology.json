@@ -1,0 +1,59 @@
+{
+  "commit": "bbef1988c9cbe0dbbbb65780eeec3e56de94f517",
+  "terms": [
+    {
+      "source": "Everglow Cloud",
+      "localized": {
+        "es": "Everglow Cloud",
+        "fr": "Everglow Cloud",
+        "ja": "Everglow Cloud",
+        "zh-Hans": "Everglow 云端"
+      }
+    },
+    {
+      "source": "Privacy Policy",
+      "localized": {
+        "es": "Política de privacidad",
+        "fr": "Politique de confidentialité",
+        "ja": "プライバシーポリシー",
+        "zh-Hans": "隐私政策"
+      }
+    },
+    {
+      "source": "Terms of Use",
+      "localized": {
+        "es": "Términos de uso",
+        "fr": "Conditions d'utilisation",
+        "ja": "利用規約",
+        "zh-Hans": "使用条款"
+      }
+    },
+    {
+      "source": "Unlimited",
+      "localized": {
+        "es": "Ilimitado",
+        "fr": "Illimité",
+        "ja": "無制限",
+        "zh-Hans": "无限版"
+      }
+    },
+    {
+      "source": "On-device",
+      "localized": {
+        "es": "En el dispositivo",
+        "fr": "Sur l'appareil",
+        "ja": "端末内",
+        "zh-Hans": "本地模型"
+      }
+    },
+    {
+      "source": "Cloud",
+      "localized": {
+        "es": "Cloud",
+        "fr": "Cloud",
+        "ja": "Cloud",
+        "zh-Hans": "云端"
+      }
+    }
+  ]
+}

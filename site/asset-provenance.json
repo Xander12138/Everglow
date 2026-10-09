@@ -1,0 +1,27 @@
+[
+  {
+    "asset": "assets/earlier-entry.png",
+    "source": "/Users/xander/Documents/Codex/2026-09-26/do-a-research-on-everglow-ai/outputs/app-store-refreshed/24-plan05-maya-march-source-manual.png",
+    "sha256": "310ff0bcb06953e79e8a3b04414fbe5006c77b1a2f4dee0348ffe3dee60b6142"
+  },
+  {
+    "asset": "assets/import-preview.png",
+    "source": "/Users/xander/Documents/Codex/2026-09-26/do-a-research-on-everglow-ai/outputs/app-store-refreshed/22-plan13-import-preview-clean.png",
+    "sha256": "eb78b153eb42a8aa40e7f62986cd346eaaca86a51099b4f4681656766463b7c4"
+  },
+  {
+    "asset": "assets/export.png",
+    "source": "/Users/xander/Documents/Codex/2026-09-26/do-a-research-on-everglow-ai/outputs/app-store-refreshed/21-plan14-markdown-export.png",
+    "sha256": "70a0fded89abaf9ce3f805ae8aa592ae5aaf8381bb57807f1bb179034e09b355"
+  },
+  {
+    "asset": "assets/room-listing-entry.png",
+    "source": "/Users/xander/Documents/Codex/2026-09-26/do-a-research-on-everglow-ai/outputs/app-store-refreshed/07-room-listing-raw.png",
+    "sha256": "5c624a962eb75ac5183b80ce9e16c3e991b97435959ae597f667269adbd50620"
+  },
+  {
+    "asset": "assets/companion-chat.png",
+    "source": "/Users/xander/Documents/Codex/2026-09-26/do-a-research-on-everglow-ai/outputs/app-store-refreshed/25-plan07-housewarming-aftermath-chat.png",
+    "sha256": "9df222d32f2b2d2a7ab8af47a86c2201c82b090a7dfc6da1f9504d481fa38aa6"
+  }
+]
