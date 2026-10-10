@@ -9,7 +9,7 @@ Source for [everglow.cc](https://everglow.cc). The site is built from `site/` an
   - `locales/` holds the copy. Every text node is matched per locale, so new copy needs all five languages.
   - `assets/` holds images and icons.
   - `build.py`, `validate.py` and `make_og.py` are the build tools.
-- `index.html`, `privacy.html`, `terms.html` (repo root): the original GitHub Pages copies at `xander12138.github.io/Everglow/`. Older app versions link to them, so **leave them in place**. `site/validate.py` also pins the legal pages to these two files' git blob hashes (via `site/sources/github-*.html`). If a policy changes, update the root file and its `site/sources/` copy together, then update the pinned hash.
+- `index.html`, `privacy.html`, `terms.html` (repo root): the original GitHub Pages copies at `xander12138.github.io/Everglow/`. Older app versions link to them, so **leave them in place**. Each carries a canonical link and a notice pointing at its everglow.cc page (#3), placed outside the policy text. `site/validate.py` pins the legal pages to the policy as published, kept in `site/sources/github-*.html` by git blob hash. If a policy changes, update the root file's policy text and its `site/sources/` copy together, then update the pinned hash.
 
 ## Build locally
 
