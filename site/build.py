@@ -36,6 +36,8 @@ PAGES = [
      'Everglow stores your journal on your iPhone. Whether AI requests leave the device depends on the engine you choose: on-device, your own API key, or optional Cloud.'),
     ('rosebud-alternative', 'rosebud-alternative/index.html', '/rosebud-alternative/', 'Rosebud alternative now the free plan has ended | Everglow',
      'Rosebud retired its free plan on 30 September 2026. Everglow is an iPhone AI journal with a one-time unlock, on-device AI or your own key, and Markdown import.'),
+    ('move-from-day-one', 'move-from-day-one/index.html', '/move-from-day-one/', 'How to move your Day One journal | Everglow',
+     'Export Day One as JSON and import it into Everglow: dates, text and tags carry over; photos, places and weather don’t. Steps, a format table and limits.'),
     ('not-found', '404.html', '/404.html', 'Page not found — Everglow',
      'Return to Everglow’s journal, AI options and import information.'),
 ]
@@ -43,7 +45,7 @@ PAGES = [
 # Answer-first question pages: linked from every footer, titled by their question (AEO).
 QUESTIONS = ('what-is-an-ai-journal', 'offline-ai-journal', 'private-ai-journal')
 # Longer guides (#4): footer-linked and titled like the question pages.
-GUIDES = ('rosebud-alternative',)
+GUIDES = ('rosebud-alternative', 'move-from-day-one')
 
 LANGUAGES = {'en':('en','English'), 'zh':('zh-Hans','中文'), 'ja':('ja','日本語'),
              'fr':('fr','Français'), 'es':('es','Español')}
@@ -55,6 +57,7 @@ EN_UI = {'language':'Language','main':'Main navigation','skip':'Skip to content'
          'home':'Home','not-found':'Page not found',
          'what-is-an-ai-journal':'What is an AI journal?','offline-ai-journal':'Offline AI journal',
          'private-ai-journal':'Private AI journal',
+         'move-from-day-one':'Move from Day One',
          'rosebud-alternative':'Rosebud alternative',
          'features':['Journal timeline and search','Ask questions across your journal','AI companion chat',
                      'Pages for the people and places you write about','On-device AI, your own API key, or optional Cloud',
