@@ -42,6 +42,8 @@ PAGES = [
      'Everglow for iPhone works with your own OpenAI, Claude, Gemini or DeepSeek API key. Unlimited is a one-time $9.99 unlock (US); your provider bills AI usage.'),
     ('on-device-ai-journal-iphone', 'on-device-ai-journal-iphone/index.html', '/on-device-ai-journal-iphone/', 'How does on-device AI journaling work on iPhone? | Everglow',
      'Everglow runs Google’s Gemma 4 E2B on your iPhone with LiteRT-LM after one 2.6 GB Wi-Fi download. What the model does, what it needs, and the trade-offs.'),
+    ('journal-that-remembers-people', 'journal-that-remembers-people/index.html', '/journal-that-remembers-people/', 'Is there a journal app that remembers people? | Everglow',
+     'Everglow gives each person you write about a page built from your entries, shows the sentence behind every fact, keeps earlier values and lets you correct them.'),
     ('not-found', '404.html', '/404.html', 'Page not found — Everglow',
      'Return to Everglow’s journal, AI options and import information.'),
 ]
@@ -49,7 +51,7 @@ PAGES = [
 # Answer-first question pages: linked from every footer, titled by their question (AEO).
 QUESTIONS = ('what-is-an-ai-journal', 'offline-ai-journal', 'private-ai-journal')
 # Longer guides (#4): footer-linked and titled like the question pages.
-GUIDES = ('rosebud-alternative', 'move-from-day-one', 'own-api-key-journal', 'on-device-ai-journal-iphone')
+GUIDES = ('rosebud-alternative', 'move-from-day-one', 'own-api-key-journal', 'on-device-ai-journal-iphone', 'journal-that-remembers-people')
 
 LANGUAGES = {'en':('en','English'), 'zh':('zh-Hans','中文'), 'ja':('ja','日本語'),
              'fr':('fr','Français'), 'es':('es','Español')}
@@ -61,6 +63,7 @@ EN_UI = {'language':'Language','main':'Main navigation','skip':'Skip to content'
          'home':'Home','not-found':'Page not found',
          'what-is-an-ai-journal':'What is an AI journal?','offline-ai-journal':'Offline AI journal',
          'private-ai-journal':'Private AI journal',
+         'journal-that-remembers-people':'Journal that remembers people',
          'on-device-ai-journal-iphone':'On-device AI on iPhone',
          'own-api-key-journal':'Use your own API key',
          'move-from-day-one':'Move from Day One',
