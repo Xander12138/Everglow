@@ -182,7 +182,7 @@
       "Can an AI journal work offline?",
       "Yes, with on-device AI. Everglow can run its AI model on your iPhone. After a one-time model download, you can write, ask your journal questions and talk with the companion without sending your words anywhere.",
       "What needs a connection",
-      "The first model download, about 2.6 GB. Wi-Fi is recommended.",
+      "The first model download, about 2.6 GB. It downloads over Wi-Fi only.",
       "Your own API key or Everglow Cloud, if you choose either. Both are remote processing.",
       "Optional iCloud backup.",
       "What works without one",

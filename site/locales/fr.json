@@ -209,7 +209,7 @@
       "Un journal avec IA peut-il fonctionner hors ligne ?",
       "Oui, avec l'IA sur l'appareil. Everglow peut exécuter son modèle d'IA sur votre iPhone. Après un téléchargement unique du modèle, vous pouvez écrire, interroger votre journal et parler avec le compagnon sans envoyer vos mots nulle part.",
       "Ce qui nécessite une connexion",
-      "Le premier téléchargement du modèle, environ 2,6 Go. Le Wi-Fi est recommandé.",
+      "Le premier téléchargement du modèle, environ 2,6 Go. Il se fait uniquement en Wi-Fi.",
       "Votre propre clé API ou Everglow Cloud, si vous choisissez l'un ou l'autre. Il s'agit dans les deux cas d'un traitement à distance.",
       "La sauvegarde iCloud facultative.",
       "Ce qui fonctionne sans connexion",

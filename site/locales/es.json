@@ -209,7 +209,7 @@
       "¿Un diario con IA puede funcionar sin conexión?",
       "Sí, con la IA en el dispositivo. Everglow puede ejecutar su modelo de IA en tu iPhone. Tras descargar el modelo una sola vez, puedes escribir, hacerle preguntas a tu diario y hablar con el compañero sin enviar tus palabras a ningún sitio.",
       "Lo que necesita conexión",
-      "La primera descarga del modelo, de unos 2,6 GB. Se recomienda usar Wi-Fi.",
+      "La primera descarga del modelo, de unos 2,6 GB. Solo se descarga con Wi-Fi.",
       "Tu propia clave API o Everglow Cloud, si eliges alguna de las dos. Ambas son procesamiento remoto.",
       "La copia de seguridad opcional de iCloud.",
       "Lo que funciona sin conexión",
