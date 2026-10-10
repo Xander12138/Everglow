@@ -34,12 +34,26 @@ PAGES = [
      'Everglow’s on-device mode runs AI on your iPhone after a one-time model download, so you can write and reflect without a connection.'),
     ('private-ai-journal', 'private-ai-journal/index.html', '/private-ai-journal/', 'Is an AI journal private? Where your entries go',
      'Everglow stores your journal on your iPhone. Whether AI requests leave the device depends on the engine you choose: on-device, your own API key, or optional Cloud.'),
+    ('rosebud-alternative', 'rosebud-alternative/index.html', '/rosebud-alternative/', 'Rosebud alternative now the free plan has ended | Everglow',
+     'Rosebud retired its free plan on 30 September 2026. Everglow is an iPhone AI journal with a one-time unlock, on-device AI or your own key, and Markdown import.'),
+    ('move-from-day-one', 'move-from-day-one/index.html', '/move-from-day-one/', 'How to move your Day One journal | Everglow',
+     'Export Day One as JSON and import it into Everglow: dates, text and tags carry over; photos, places and weather don’t. Steps, a format table and limits.'),
+    ('own-api-key-journal', 'own-api-key-journal/index.html', '/own-api-key-journal/', 'Can I use my own API key in an AI journal? | Everglow',
+     'Everglow for iPhone works with your own OpenAI, Claude, Gemini or DeepSeek API key. Unlimited is a one-time $9.99 unlock (US); your provider bills AI usage.'),
+    ('on-device-ai-journal-iphone', 'on-device-ai-journal-iphone/index.html', '/on-device-ai-journal-iphone/', 'How does on-device AI journaling work on iPhone? | Everglow',
+     'Everglow runs Google’s Gemma 4 E2B on your iPhone with LiteRT-LM after one 2.6 GB Wi-Fi download. What the model does, what it needs, and the trade-offs.'),
+    ('journal-that-remembers-people', 'journal-that-remembers-people/index.html', '/journal-that-remembers-people/', 'Is there a journal app that remembers people? | Everglow',
+     'Everglow gives each person you write about a page built from your entries, shows the sentence behind every fact, keeps earlier values and lets you correct them.'),
+    ('changelog', 'changelog/index.html', '/changelog/', 'What’s new in Everglow: release notes by version',
+     'Everglow release notes, newest first. Version 1.5 (1 October 2026) adds Japanese, French and Spanish and improves Ask, relationships and imports.'),
     ('not-found', '404.html', '/404.html', 'Page not found — Everglow',
      'Return to Everglow’s journal, AI options and import information.'),
 ]
 
 # Answer-first question pages: linked from every footer, titled by their question (AEO).
 QUESTIONS = ('what-is-an-ai-journal', 'offline-ai-journal', 'private-ai-journal')
+# Longer guides (#4): footer-linked and titled like the question pages.
+GUIDES = ('rosebud-alternative', 'move-from-day-one', 'own-api-key-journal', 'on-device-ai-journal-iphone', 'journal-that-remembers-people', 'changelog')
 
 LANGUAGES = {'en':('en','English'), 'zh':('zh-Hans','中文'), 'ja':('ja','日本語'),
              'fr':('fr','Français'), 'es':('es','Español')}
@@ -51,6 +65,12 @@ EN_UI = {'language':'Language','main':'Main navigation','skip':'Skip to content'
          'home':'Home','not-found':'Page not found',
          'what-is-an-ai-journal':'What is an AI journal?','offline-ai-journal':'Offline AI journal',
          'private-ai-journal':'Private AI journal',
+         'changelog':'What’s new',
+         'journal-that-remembers-people':'Journal that remembers people',
+         'on-device-ai-journal-iphone':'On-device AI on iPhone',
+         'own-api-key-journal':'Use your own API key',
+         'move-from-day-one':'Move from Day One',
+         'rosebud-alternative':'Rosebud alternative',
          'features':['Journal timeline and search','Ask questions across your journal','AI companion chat',
                      'Pages for the people and places you write about','On-device AI, your own API key, or optional Cloud',
                      'Markdown import and export','English, Chinese, Japanese, French and Spanish']}
@@ -161,13 +181,13 @@ for locale,(html_lang,_) in LANGUAGES.items():
             main='<main id="main">'+body+'</main>'
             nav=''.join('<a href="'+link(locale_root/slug/'index.html')+'"'+(' aria-current="page"' if key==slug else '')+'>'+escape(ui[slug])+'</a>' for slug in ('ai-and-privacy','plans','portability'))
             header='<header><nav class="wrap" aria-label="'+escape(ui['main'],quote=True)+'"><a class="brand" href="'+link(locale_root/'index.html')+'"><img class="brand-icon" src="'+link(dist/'assets'/'icon-192.png')+'" width="32" height="32" alt=""><span>e</span>verglow</a><div class="navlinks">'+nav+'</div></nav>'+language_nav+'</header>'
-            footer='<footer><div class="wrap footer-inner"><span>'+escape(ui['footer'])+'</span><div class="footerlinks"><a href="'+SUPPORT+'">'+escape(ui['support'])+'</a><a href="'+link(locale_root/'privacy/index.html')+'">'+escape(ui['privacy'])+'</a><a href="'+link(locale_root/'terms/index.html')+'">'+escape(ui['terms'])+'</a>'+''.join('<a href="'+link(locale_root/q/'index.html')+'">'+escape(ui[q])+'</a>' for q in QUESTIONS)+'</div></div></footer>'
+            footer='<footer><div class="wrap footer-inner"><span>'+escape(ui['footer'])+'</span><div class="footerlinks"><a href="'+SUPPORT+'">'+escape(ui['support'])+'</a><a href="'+link(locale_root/'privacy/index.html')+'">'+escape(ui['privacy'])+'</a><a href="'+link(locale_root/'terms/index.html')+'">'+escape(ui['terms'])+'</a>'+''.join('<a href="'+link(locale_root/q/'index.html')+'">'+escape(ui[q])+'</a>' for q in QUESTIONS+GUIDES)+'</div></div></footer>'
             if locale!='en':
                 texts=data['pages'][key]
                 if key=='home':heading=(texts[1]+('' if locale in ('zh','ja') else ' ')+texts[2]).rstrip('。.')
                 else:heading=texts[1]+(' '+texts[2] if key in ('ai-and-privacy','portability','not-found') else '')
                 title='Everglow — '+heading;description=texts[2 if key=='plans' else 3]
-                if key in QUESTIONS:title=texts[1]+' | Everglow: AI Journal';description=texts[2]
+                if key in QUESTIONS+GUIDES:title=texts[1]+' | Everglow: AI Journal';description=texts[2]
             graph=[]
             if key=='home':
                 app={'@context':'https://schema.org','@type':'SoftwareApplication','name':'Everglow: AI Journal','operatingSystem':'iOS','applicationCategory':'LifestyleApplication','installUrl':APP,'description':description,'inLanguage':html_lang,
@@ -187,7 +207,7 @@ for locale,(html_lang,_) in LANGUAGES.items():
             faqs=re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>',body,re.S)
             plain=lambda h:unescape(re.sub(r'<[^>]+>','',h)).strip()
             if faqs:graph.append({'@context':'https://schema.org','@type':'FAQPage','inLanguage':html_lang,'mainEntity':[{'@type':'Question','name':plain(q),'acceptedAnswer':{'@type':'Answer','text':plain(a)}} for q,a in faqs]})
-            if key in QUESTIONS and indexable:
+            if key in QUESTIONS+GUIDES and indexable:
                 home_url=origin+('/' if locale=='en' else '/'+locale+'/')
                 graph.append({'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[
                     {'@type':'ListItem','position':1,'name':ui['home'],'item':home_url},

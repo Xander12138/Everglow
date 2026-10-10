@@ -23,6 +23,15 @@ Key facts:
 - [Can an AI journal work offline?](https://everglow.cc/offline-ai-journal/): on-device AI and what needs a connection
 - [Is an AI journal private?](https://everglow.cc/private-ai-journal/): where your writing goes with each AI engine
 
+## Guides
+
+- [Looking for a Rosebud alternative?](https://everglow.cc/rosebud-alternative/): Rosebud's free plan retirement (30 September 2026), Everglow's one-time unlock vs optional Cloud subscription, where the AI runs, and importing a Rosebud Markdown export
+- [How to move your Day One journal to Everglow](https://everglow.cc/move-from-day-one/): export Day One as JSON and import it into Everglow 1.5; dates, text and tags carry over, photos, locations and weather don't
+- [Can I use my own API key in an AI journal?](https://everglow.cc/own-api-key-journal/): OpenAI, Claude, Gemini or DeepSeek keys, what each request sends, where the key is kept, and the one-time Unlimited purchase
+- [How does on-device AI journaling work on iPhone?](https://everglow.cc/on-device-ai-journal-iphone/): Gemma 4 E2B on Google's LiteRT-LM after a one-time 2.6 GB Wi-Fi-only download; what runs on the model, the memory-based context budget, and the trade-offs, verified against Everglow 1.5
+- [Is there a journal app that remembers the people you write about?](https://everglow.cc/journal-that-remembers-people/): a page per person built from your entries, the sentence behind each fact, earlier values kept, and how to correct it
+- [What’s new in Everglow](https://everglow.cc/changelog/): release notes for every App Store version, newest first, from 1.1 (2 July 2026) to 1.5 (1 October 2026)
+
 ## Details
 
 - [AI and privacy](https://everglow.cc/ai-and-privacy/): the data flow for on-device AI, your own API key and Everglow Cloud
