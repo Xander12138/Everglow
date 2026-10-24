@@ -18,9 +18,10 @@ img{{width:260px;height:260px;border-radius:58px;box-shadow:0 18px 40px #34252d2
 .brand{{font:52px Georgia,serif;letter-spacing:-.03em;margin-bottom:26px}}.brand span{{color:#875119}}
 h1{{font:400 {size}px/1.1 Georgia,"Times New Roman",serif;letter-spacing:-.03em;margin:0 0 30px}}
 .eyebrow{{font:650 21px/1.5 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#875119}}
-{cjk}</style><img src="{icon}"><div><div class="brand"><span>e</span>verglow</div><h1>{l1}<br><em>{l2}</em></h1><div class="eyebrow">{eyebrow}</div></div>'''
+{cjk}</style><img src="{icon}"><div><div class="brand">{brand}</div><h1>{l1}<br><em>{l2}</em></h1><div class="eyebrow">{eyebrow}</div></div>'''
 
 source = json.loads((ROOT / 'locales/source.json').read_text())
+BRAND = {'zh': '熠E'}  # the app's Chinese name (app #973), as build.py's header wordmark
 with tempfile.TemporaryDirectory() as tmp:
     for locale in ('en', 'zh', 'ja', 'fr', 'es'):
         home = (source if locale == 'en' else json.loads((ROOT / 'locales' / (locale + '.json')).read_text()))['pages']['home']
@@ -29,7 +30,8 @@ with tempfile.TemporaryDirectory() as tmp:
         em = lambda t: sum(1.0 if ord(c) >= 0x2E80 else 0.45 for c in t)  # CJK glyphs are full-width
         size = min(62, int(670 / max(em(home[1]), em(home[2]))))
         cjk = 'em{font-style:normal}' if locale in ('zh', 'ja') else ''
-        page.write_text(CARD.format(size=size, cjk=cjk, icon=ICON.as_uri(), eyebrow=escape(home[0]), l1=escape(home[1]), l2=escape(home[2])))
+        brand = escape(BRAND[locale]) if locale in BRAND else '<span>e</span>verglow'
+        page.write_text(CARD.format(size=size, cjk=cjk, brand=brand, icon=ICON.as_uri(), eyebrow=escape(home[0]), l1=escape(home[1]), l2=escape(home[2])))
         out = ROOT / 'assets' / ('og-' + locale + '.png')
         subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files',
                         '--window-size=1200,630', '--screenshot=' + str(out), page.as_uri()], check=True, capture_output=True, timeout=60)
