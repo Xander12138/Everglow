@@ -6,6 +6,7 @@ Key facts:
 
 - Platform: iPhone (App Store: https://apps.apple.com/us/app/everglow-ai-journal/id6775044981).
 - Languages: English, Simplified Chinese, Japanese, French and Spanish.
+- Chinese name: 熠E. In Chinese the app and its App Store listing are named 熠E (熠E: AI 日志).
 - Free to start: up to 7 journal entries and 10 companion chat turns.
 - Everglow Unlimited: a one-time purchase that permanently removes the entry and companion-chat limits. It does not include hosted AI.
 - Everglow Cloud: an optional subscription for hosted AI with a monthly usage allowance; request context goes through Everglow's service to OpenAI, and Everglow retains no content after the request completes. Entry and chat limits are lifted while it is active.

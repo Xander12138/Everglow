@@ -57,6 +57,9 @@ GUIDES = ('rosebud-alternative', 'move-from-day-one', 'own-api-key-journal', 'on
 
 LANGUAGES = {'en':('en','English'), 'zh':('zh-Hans','中文'), 'ja':('ja','日本語'),
              'fr':('fr','Français'), 'es':('es','Español')}
+# In Chinese the app is 熠E (app #973), and its Chinese App Store listing reads 熠E: AI 日志; Everglow elsewhere.
+BRAND = {'zh':'熠E'}
+APP_NAME = {'zh':'熠E: AI 日志'}
 SOURCE = json.loads((ROOT/'locales/source.json').read_text())
 EN_UI = {'language':'Language','main':'Main navigation','skip':'Skip to content',
          'preview':'Local review draft · Nothing published','ai-and-privacy':'AI & privacy',
@@ -147,6 +150,10 @@ for locale,(html_lang,_) in LANGUAGES.items():
     data={} if locale=='en' else json.loads((ROOT/'locales'/(locale+'.json')).read_text())
     ui=EN_UI if locale=='en' else data['ui']
     locale_root=dist if locale=='en' else dist/locale
+    brand=BRAND.get(locale,'Everglow');app_name=APP_NAME.get(locale,'Everglow: AI Journal')
+    # A localized name keeps the English ones as alternates, so search and AI engines connect the two.
+    alternate_names=([brand,'Everglow: AI Journal'] if locale in BRAND else [])+['Everglow AI Journal','Everglow']
+    wordmark=escape(brand) if locale in BRAND else '<span>e</span>verglow'
     for key,filename,path,title,description in PAGES:
         destination=locale_root/filename;destination.parent.mkdir(parents=True,exist_ok=True)
         def link(target):
@@ -170,9 +177,9 @@ for locale,(html_lang,_) in LANGUAGES.items():
             body=body.replace('href="./index.html"','href="'+SUPPORT+'"')
             for sibling in ('privacy','terms'):body=body.replace('href="./'+sibling+'.html"','href="'+link(locale_root/sibling/'index.html')+'"')
             main='<main class="wrap" id="main">'+body+'</main>'
-            header='<header class="legal-header"><a href="'+link(locale_root/'index.html')+'">← Everglow</a>'+language_nav+'</header>'
+            header='<header class="legal-header"><a href="'+link(locale_root/'index.html')+'">← '+escape(brand)+'</a>'+language_nav+'</header>'
             footer=''
-            if locale!='en':title='Everglow — '+segments[0];description=segments[2]
+            if locale!='en':title=brand+' — '+segments[0];description=segments[2]
         else:
             body=translated_body(key,locale,data)
             site_base=link(dist/'assets'/'earlier-entry.png').rsplit('assets/',1)[0]
@@ -180,27 +187,27 @@ for locale,(html_lang,_) in LANGUAGES.items():
             body=body.replace('{{BASE}}assets/',site_base+'assets/').replace('{{BASE}}',local_base).replace('{{APP}}',APP)
             main='<main id="main">'+body+'</main>'
             nav=''.join('<a href="'+link(locale_root/slug/'index.html')+'"'+(' aria-current="page"' if key==slug else '')+'>'+escape(ui[slug])+'</a>' for slug in ('ai-and-privacy','plans','portability'))
-            header='<header><nav class="wrap" aria-label="'+escape(ui['main'],quote=True)+'"><a class="brand" href="'+link(locale_root/'index.html')+'"><img class="brand-icon" src="'+link(dist/'assets'/'icon-192.png')+'" width="32" height="32" alt=""><span>e</span>verglow</a><div class="navlinks">'+nav+'</div></nav>'+language_nav+'</header>'
+            header='<header><nav class="wrap" aria-label="'+escape(ui['main'],quote=True)+'"><a class="brand" href="'+link(locale_root/'index.html')+'"><img class="brand-icon" src="'+link(dist/'assets'/'icon-192.png')+'" width="32" height="32" alt="">'+wordmark+'</a><div class="navlinks">'+nav+'</div></nav>'+language_nav+'</header>'
             footer='<footer><div class="wrap footer-inner"><span>'+escape(ui['footer'])+'</span><div class="footerlinks"><a href="'+SUPPORT+'">'+escape(ui['support'])+'</a><a href="'+link(locale_root/'privacy/index.html')+'">'+escape(ui['privacy'])+'</a><a href="'+link(locale_root/'terms/index.html')+'">'+escape(ui['terms'])+'</a>'+''.join('<a href="'+link(locale_root/q/'index.html')+'">'+escape(ui[q])+'</a>' for q in QUESTIONS+GUIDES)+'</div></div></footer>'
             if locale!='en':
                 texts=data['pages'][key]
                 if key=='home':heading=(texts[1]+('' if locale in ('zh','ja') else ' ')+texts[2]).rstrip('。.')
                 else:heading=texts[1]+(' '+texts[2] if key in ('ai-and-privacy','portability','not-found') else '')
-                title='Everglow — '+heading;description=texts[2 if key=='plans' else 3]
-                if key in QUESTIONS+GUIDES:title=texts[1]+' | Everglow: AI Journal';description=texts[2]
+                title=brand+' — '+heading;description=texts[2 if key=='plans' else 3]
+                if key in QUESTIONS+GUIDES:title=texts[1]+' | '+app_name;description=texts[2]
             graph=[]
             if key=='home':
-                app={'@context':'https://schema.org','@type':'SoftwareApplication','name':'Everglow: AI Journal','operatingSystem':'iOS','applicationCategory':'LifestyleApplication','installUrl':APP,'description':description,'inLanguage':html_lang,
+                app={'@context':'https://schema.org','@type':'SoftwareApplication','name':app_name,'operatingSystem':'iOS','applicationCategory':'LifestyleApplication','installUrl':APP,'description':description,'inLanguage':html_lang,
                      'offers':{'@type':'Offer','price':'0','priceCurrency':'USD','description':'Free download with in-app purchases'},
                      'featureList':ui['features'],'publisher':{'@type':'Person','name':'Haoyu Xu'},
                      # "Everglow" alone is shared with a K-pop group; give search and AI engines the app's full name and its App Store identity.
-                     'alternateName':['Everglow AI Journal','Everglow'],'sameAs':[APP],
+                     'alternateName':alternate_names,'sameAs':[APP],
                      'disambiguatingDescription':'An AI journaling app for iPhone by Haoyu Xu. Not related to the K-pop group EVERGLOW.'}
                 if indexable:
                     app['url']=origin+locale_path
                     app['screenshot']=[origin+'/assets/'+a for a in ('room-listing-entry.png','earlier-entry.png','companion-chat.png','import-preview.png','export.png')]
                 graph.append(app)
-                site={'@context':'https://schema.org','@type':'WebSite','name':'Everglow: AI Journal','alternateName':['Everglow AI Journal','Everglow'],'inLanguage':html_lang}
+                site={'@context':'https://schema.org','@type':'WebSite','name':app_name,'alternateName':alternate_names,'inLanguage':html_lang}
                 if indexable:site['url']=origin+'/'
                 graph.append(site)
             # Built from the visible FAQ, never hidden-only, so markup and page always agree.
@@ -227,7 +234,7 @@ for locale,(html_lang,_) in LANGUAGES.items():
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title><meta name="description" content="{escape(description,quote=True)}">
 <meta name="robots" content="{robots}"><meta name="apple-itunes-app" content="app-id=6775044981"><meta name="msvalidate.01" content="73882E46817FEBD890296607D8E70152"><meta name="theme-color" content="#f7f0df">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Everglow: AI Journal">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{escape(app_name,quote=True)}">
 <meta property="og:title" content="{escape(title,quote=True)}"><meta property="og:description" content="{escape(description,quote=True)}">
 {metadata}{share_image}<link rel="stylesheet" href="{link(dist/'style.css')}"><link rel="icon" type="image/png" sizes="32x32" href="{link(dist/'assets'/'icon-32.png')}"><link rel="icon" type="image/png" sizes="192x192" href="{link(dist/'assets'/'icon-192.png')}"><link rel="apple-touch-icon" href="{link(dist/'assets'/'apple-touch-icon.png')}">
 <style>{legal_style}</style>
