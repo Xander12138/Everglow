@@ -45,7 +45,7 @@ PAGES = [
     ('journal-that-remembers-people', 'journal-that-remembers-people/index.html', '/journal-that-remembers-people/', 'Is there a journal app that remembers people? | Everglow',
      'Everglow gives each person you write about a page built from your entries, shows the sentence behind every fact, keeps earlier values and lets you correct them.'),
     ('changelog', 'changelog/index.html', '/changelog/', 'What’s new in Everglow: release notes by version',
-     'Everglow release notes, newest first. Version 1.5 (1 October 2026) adds Japanese, French and Spanish and improves Ask, relationships and imports.'),
+     'Everglow release notes, newest first. Version 1.6.1 (2 November 2026) brings Everglow to iPad; 1.6 added photos and Deep, a third depth for Ask.'),
     ('not-found', '404.html', '/404.html', 'Page not found — Everglow',
      'Return to Everglow’s journal, AI options and import information.'),
 ]
